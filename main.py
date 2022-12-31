@@ -30,11 +30,11 @@ class Web_Scraping_pgn(unittest.TestCase):
     def test_like(self):
         driver = self.driver
 
-        for i in range (60):
+        for i in range (60): # Num likes
             # auto like
             like_button = driver.find_element(By.XPATH, '//button//span[text()="Like"]')
             driver.execute_script("arguments[0].click();", like_button)
-            time.sleep(.36)
+            time.sleep(.36) # Speed
 
 
 if __name__ == "__main__":
